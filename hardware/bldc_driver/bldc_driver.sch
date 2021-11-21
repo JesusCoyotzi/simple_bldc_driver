@@ -1,0 +1,883 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 3
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:PWR_FLAG #FLG01
+U 1 1 611374E0
+P 850 750
+F 0 "#FLG01" H 850 825 50  0001 C CNN
+F 1 "PWR_FLAG" H 850 923 50  0000 C CNN
+F 2 "" H 850 750 50  0001 C CNN
+F 3 "~" H 850 750 50  0001 C CNN
+	1    850  750 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG02
+U 1 1 6113772B
+P 1300 750
+F 0 "#FLG02" H 1300 825 50  0001 C CNN
+F 1 "PWR_FLAG" H 1300 923 50  0000 C CNN
+F 2 "" H 1300 750 50  0001 C CNN
+F 3 "~" H 1300 750 50  0001 C CNN
+	1    1300 750 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 61153E4D
+P 850 1000
+F 0 "#PWR01" H 850 750 50  0001 C CNN
+F 1 "GND" H 855 827 50  0000 C CNN
+F 2 "" H 850 1000 50  0001 C CNN
+F 3 "" H 850 1000 50  0001 C CNN
+	1    850  1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12C #PWR02
+U 1 1 61154595
+P 1300 1000
+F 0 "#PWR02" H 1300 850 50  0001 C CNN
+F 1 "+12C" H 1315 1173 50  0000 C CNN
+F 2 "" H 1300 1000 50  0001 C CNN
+F 3 "" H 1300 1000 50  0001 C CNN
+	1    1300 1000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1300 1000 1300 750 
+Wire Wire Line
+	850  1000 850  750 
+$Comp
+L Transistor_FET:IRF540N Q1
+U 1 1 6116C3FA
+P 4050 2050
+F 0 "Q1" H 4254 2096 50  0000 L CNN
+F 1 "IRF540N" H 4254 2005 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 4300 1975 50  0001 L CIN
+F 3 "http://www.irf.com/product-info/datasheets/data/irf540n.pdf" H 4050 2050 50  0001 L CNN
+	1    4050 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 2450 4150 2300
+Connection ~ 4150 2450
+Wire Wire Line
+	3700 2450 4150 2450
+Wire Wire Line
+	4150 1850 4150 1750
+$Comp
+L power:GND #PWR07
+U 1 1 611AA6AE
+P 7050 3350
+F 0 "#PWR07" H 7050 3100 50  0001 C CNN
+F 1 "GND" H 7055 3177 50  0000 C CNN
+F 2 "" H 7050 3350 50  0001 C CNN
+F 3 "" H 7050 3350 50  0001 C CNN
+	1    7050 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Driver_FET:IR2101 U2
+U 1 1 611DEA61
+P 5250 4900
+F 0 "U2" H 5250 5581 50  0000 C CNN
+F 1 "IR2101" H 5250 5490 50  0000 C CNN
+F 2 "" H 5250 4900 50  0001 C CIN
+F 3 "https://www.infineon.com/dgdl/ir2101.pdf?fileId=5546d462533600a4015355c7a755166c" H 5250 4900 50  0001 C CNN
+	1    5250 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 611DEBC9
+P 5250 5450
+F 0 "#PWR06" H 5250 5200 50  0001 C CNN
+F 1 "GND" H 5255 5277 50  0000 C CNN
+F 2 "" H 5250 5450 50  0001 C CNN
+F 3 "" H 5250 5450 50  0001 C CNN
+	1    5250 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C4
+U 1 1 611DEBD3
+P 6400 4900
+F 0 "C4" H 6515 4946 50  0000 L CNN
+F 1 "470 nF" H 6515 4855 50  0000 L CNN
+F 2 "" H 6438 4750 50  0001 C CNN
+F 3 "~" H 6400 4900 50  0001 C CNN
+	1    6400 4900
+	1    0    0    -1  
+$EndComp
+Connection ~ 5250 5400
+Wire Wire Line
+	5250 5400 5250 5450
+Wire Wire Line
+	5550 4600 6400 4600
+Wire Wire Line
+	6400 4600 6400 4750
+Wire Wire Line
+	6400 5050 6400 5100
+Wire Wire Line
+	4150 5400 5250 5400
+Wire Wire Line
+	4150 5100 4150 5400
+Wire Wire Line
+	4150 4350 4150 4800
+$Comp
+L Device:C C3
+U 1 1 611DEBE5
+P 4150 4950
+F 0 "C3" H 4265 4996 50  0000 L CNN
+F 1 "33 uF" H 4265 4905 50  0000 L CNN
+F 2 "" H 4188 4800 50  0001 C CNN
+F 3 "~" H 4150 4950 50  0001 C CNN
+	1    4150 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 4900 4650 4900
+Wire Wire Line
+	4950 5000 4650 5000
+Text Label 4650 5000 0    50   ~ 0
+botB
+Text Label 4650 4900 0    50   ~ 0
+topB
+$Comp
+L power:+12V #PWR05
+U 1 1 611DEBF3
+P 4750 4100
+F 0 "#PWR05" H 4750 3950 50  0001 C CNN
+F 1 "+12V" H 4765 4273 50  0000 C CNN
+F 2 "" H 4750 4100 50  0001 C CNN
+F 3 "" H 4750 4100 50  0001 C CNN
+	1    4750 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 4350 4750 4350
+Wire Wire Line
+	4750 4100 4750 4350
+NoConn ~ 4750 4350
+Wire Wire Line
+	4750 4350 5250 4350
+Wire Wire Line
+	5250 4350 5250 4400
+Connection ~ 4750 4350
+Connection ~ 5250 4350
+Wire Wire Line
+	6400 4350 6400 4600
+Connection ~ 6400 4600
+$Comp
+L Device:R R4
+U 1 1 611DEC06
+P 6200 3700
+F 0 "R4" H 6270 3746 50  0000 L CNN
+F 1 "10k" H 6270 3655 50  0000 L CNN
+F 2 "" V 6130 3700 50  0001 C CNN
+F 3 "~" H 6200 3700 50  0001 C CNN
+	1    6200 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 611DEC10
+P 5700 3700
+F 0 "R3" H 5770 3746 50  0000 L CNN
+F 1 "10k" H 5770 3655 50  0000 L CNN
+F 2 "" V 5630 3700 50  0001 C CNN
+F 3 "~" H 5700 3700 50  0001 C CNN
+	1    5700 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 4350 5250 4350
+Wire Wire Line
+	6100 4350 6400 4350
+$Comp
+L Diode:1N4004 D4
+U 1 1 611DEC1C
+P 5950 4350
+F 0 "D4" H 5950 4133 50  0000 C CNN
+F 1 "1N4004" H 5950 4224 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 5950 4175 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 5950 4350 50  0001 C CNN
+	1    5950 4350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5700 3850 5700 4700
+Wire Wire Line
+	5700 4700 5550 4700
+$Comp
+L Transistor_FET:IRF540N Q3
+U 1 1 611DEC28
+P 6950 2000
+F 0 "Q3" H 7154 2046 50  0000 L CNN
+F 1 "IRF540N" H 7154 1955 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 7200 1925 50  0001 L CIN
+F 3 "http://www.irf.com/product-info/datasheets/data/irf540n.pdf" H 6950 2000 50  0001 L CNN
+	1    6950 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:IRF540N Q4
+U 1 1 611DEC32
+P 6950 2800
+F 0 "Q4" H 7154 2846 50  0000 L CNN
+F 1 "IRF540N" H 7154 2755 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 7200 2725 50  0001 L CIN
+F 3 "http://www.irf.com/product-info/datasheets/data/irf540n.pdf" H 6950 2800 50  0001 L CNN
+	1    6950 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6750 2800 6200 2800
+Wire Wire Line
+	6200 2800 6200 3550
+Wire Wire Line
+	5700 3550 5700 2000
+Wire Wire Line
+	5700 2000 6750 2000
+Wire Wire Line
+	6200 5200 5550 5200
+Wire Wire Line
+	6200 3850 6200 5200
+Wire Wire Line
+	5550 5100 6400 5100
+Wire Wire Line
+	6400 5100 6700 5100
+Wire Wire Line
+	7050 2400 7050 2300
+Connection ~ 6400 5100
+Wire Wire Line
+	7050 2400 7050 2550
+Connection ~ 7050 2400
+Wire Wire Line
+	6700 2400 6700 5100
+Wire Wire Line
+	6700 2400 7050 2400
+$Comp
+L power:+24V #PWR09
+U 1 1 611DEC4A
+P 8050 1350
+F 0 "#PWR09" H 8050 1200 50  0001 C CNN
+F 1 "+24V" H 8065 1523 50  0000 C CNN
+F 2 "" H 8050 1350 50  0001 C CNN
+F 3 "" H 8050 1350 50  0001 C CNN
+	1    8050 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 1800 7050 1750
+Wire Wire Line
+	7050 1500 8050 1500
+Wire Wire Line
+	8050 1500 8050 1350
+Wire Wire Line
+	2700 2050 3850 2050
+Connection ~ 7050 1500
+Wire Wire Line
+	4150 1500 7050 1500
+Connection ~ 8050 1500
+Wire Wire Line
+	4150 2450 4150 2550
+Wire Wire Line
+	3850 2850 3200 2850
+Wire Wire Line
+	7050 3350 7050 3250
+Wire Wire Line
+	7050 3250 7050 3100
+Connection ~ 7050 3250
+$Comp
+L Transistor_FET:IRF540N Q2
+U 1 1 6116DE86
+P 4050 2850
+F 0 "Q2" H 4254 2896 50  0000 L CNN
+F 1 "IRF540N" H 4254 2805 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 4300 2775 50  0001 L CIN
+F 3 "http://www.irf.com/product-info/datasheets/data/irf540n.pdf" H 4050 2850 50  0001 L CNN
+	1    4050 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 3250 4150 3250
+Wire Wire Line
+	4150 3250 4150 3100
+NoConn ~ 5200 2200
+$Comp
+L Diode:1N4004 D2
+U 1 1 6137B6E5
+P 4900 2050
+F 0 "D2" V 4946 1970 50  0000 R CNN
+F 1 "1N4004" V 4855 1970 50  0000 R CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 4900 1875 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 4900 2050 50  0001 C CNN
+	1    4900 2050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4900 2300 4900 2200
+Wire Wire Line
+	4150 2300 4900 2300
+Connection ~ 4150 2300
+Wire Wire Line
+	4150 2300 4150 2250
+Wire Wire Line
+	4150 1750 4900 1750
+Wire Wire Line
+	4900 1750 4900 1900
+Connection ~ 4150 1750
+Wire Wire Line
+	4150 1750 4150 1500
+NoConn ~ 5200 3000
+$Comp
+L Diode:1N4004 D3
+U 1 1 613920BE
+P 4900 2850
+F 0 "D3" V 4946 2770 50  0000 R CNN
+F 1 "1N4004" V 4855 2770 50  0000 R CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 4900 2675 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 4900 2850 50  0001 C CNN
+	1    4900 2850
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4900 3100 4900 3000
+Wire Wire Line
+	4150 3100 4900 3100
+Wire Wire Line
+	4150 2550 4900 2550
+Wire Wire Line
+	4900 2550 4900 2700
+Connection ~ 4150 2550
+Wire Wire Line
+	4150 2550 4150 2650
+Connection ~ 4150 3100
+Wire Wire Line
+	4150 3100 4150 3050
+NoConn ~ 8100 3000
+$Comp
+L Diode:1N4004 D6
+U 1 1 6139D785
+P 7800 2850
+F 0 "D6" V 7846 2770 50  0000 R CNN
+F 1 "1N4004" V 7755 2770 50  0000 R CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 7800 2675 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 7800 2850 50  0001 C CNN
+	1    7800 2850
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7800 3100 7800 3000
+Wire Wire Line
+	7050 3100 7800 3100
+Wire Wire Line
+	7050 2550 7800 2550
+Wire Wire Line
+	7800 2550 7800 2700
+Connection ~ 7050 2550
+Wire Wire Line
+	7050 2550 7050 2600
+Connection ~ 7050 3100
+Wire Wire Line
+	7050 3100 7050 3000
+NoConn ~ 8100 2200
+$Comp
+L Diode:1N4004 D5
+U 1 1 613AA01A
+P 7800 2050
+F 0 "D5" V 7846 1970 50  0000 R CNN
+F 1 "1N4004" V 7755 1970 50  0000 R CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 7800 1875 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 7800 2050 50  0001 C CNN
+	1    7800 2050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7800 2300 7800 2200
+Wire Wire Line
+	7050 2300 7800 2300
+Wire Wire Line
+	7050 1750 7800 1750
+Wire Wire Line
+	7800 1750 7800 1900
+Connection ~ 7050 1750
+Wire Wire Line
+	7050 1750 7050 1500
+Connection ~ 7050 2300
+Wire Wire Line
+	7050 2300 7050 2200
+Wire Wire Line
+	9150 3800 9150 5200
+Wire Wire Line
+	9150 5200 8500 5200
+Wire Wire Line
+	8650 3500 8650 2000
+Wire Wire Line
+	8650 4700 8500 4700
+Wire Wire Line
+	8650 3800 8650 4700
+$Comp
+L Diode:1N4004 D7
+U 1 1 61228F9D
+P 8900 4350
+F 0 "D7" H 8900 4133 50  0000 C CNN
+F 1 "1N4004" H 8900 4224 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 8900 4175 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 8900 4350 50  0001 C CNN
+	1    8900 4350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9050 4350 9350 4350
+Wire Wire Line
+	8750 4350 8200 4350
+$Comp
+L Device:R R5
+U 1 1 61228F91
+P 8650 3650
+F 0 "R5" H 8720 3696 50  0000 L CNN
+F 1 "10k" H 8720 3605 50  0000 L CNN
+F 2 "" V 8580 3650 50  0001 C CNN
+F 3 "~" H 8650 3650 50  0001 C CNN
+	1    8650 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 61228F87
+P 9150 3650
+F 0 "R6" H 9220 3696 50  0000 L CNN
+F 1 "10k" H 9220 3605 50  0000 L CNN
+F 2 "" V 9080 3650 50  0001 C CNN
+F 3 "~" H 9150 3650 50  0001 C CNN
+	1    9150 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8200 4350 8200 4400
+Connection ~ 8200 4350
+Wire Wire Line
+	7700 4350 8200 4350
+NoConn ~ 7700 4350
+Wire Wire Line
+	7700 4100 7700 4350
+Connection ~ 7700 4350
+Wire Wire Line
+	7100 4350 7700 4350
+$Comp
+L power:+12V #PWR08
+U 1 1 61228F74
+P 7700 4100
+F 0 "#PWR08" H 7700 3950 50  0001 C CNN
+F 1 "+12V" H 7715 4273 50  0000 C CNN
+F 2 "" H 7700 4100 50  0001 C CNN
+F 3 "" H 7700 4100 50  0001 C CNN
+	1    7700 4100
+	1    0    0    -1  
+$EndComp
+Text Label 7600 4900 0    50   ~ 0
+topC
+Text Label 7600 5000 0    50   ~ 0
+botC
+Wire Wire Line
+	7900 5000 7600 5000
+Wire Wire Line
+	7900 4900 7600 4900
+$Comp
+L Device:C C5
+U 1 1 61228F66
+P 7100 4950
+F 0 "C5" H 7215 4996 50  0000 L CNN
+F 1 "33 uF" H 7215 4905 50  0000 L CNN
+F 2 "" H 7138 4800 50  0001 C CNN
+F 3 "~" H 7100 4950 50  0001 C CNN
+	1    7100 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 4350 7100 4800
+Wire Wire Line
+	7100 5100 7100 5400
+Wire Wire Line
+	7100 5400 8200 5400
+Wire Wire Line
+	9350 5100 9650 5100
+Wire Wire Line
+	8500 5100 9350 5100
+Connection ~ 9350 5100
+Wire Wire Line
+	9350 5050 9350 5100
+Wire Wire Line
+	9350 4350 9350 4600
+Wire Wire Line
+	9350 4600 9350 4750
+Connection ~ 9350 4600
+Wire Wire Line
+	8500 4600 9350 4600
+Wire Wire Line
+	8200 5400 8200 5450
+$Comp
+L Device:C C6
+U 1 1 61228F54
+P 9350 4900
+F 0 "C6" H 9465 4946 50  0000 L CNN
+F 1 "470 nF" H 9465 4855 50  0000 L CNN
+F 2 "" H 9388 4750 50  0001 C CNN
+F 3 "~" H 9350 4900 50  0001 C CNN
+	1    9350 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR010
+U 1 1 61228F4A
+P 8200 5450
+F 0 "#PWR010" H 8200 5200 50  0001 C CNN
+F 1 "GND" H 8205 5277 50  0000 C CNN
+F 2 "" H 8200 5450 50  0001 C CNN
+F 3 "" H 8200 5450 50  0001 C CNN
+	1    8200 5450
+	1    0    0    -1  
+$EndComp
+Connection ~ 8200 5400
+$Comp
+L Driver_FET:IR2101 U3
+U 1 1 61228F40
+P 8200 4900
+F 0 "U3" H 8200 5581 50  0000 C CNN
+F 1 "IR2101" H 8200 5490 50  0000 C CNN
+F 2 "" H 8200 4900 50  0001 C CIN
+F 3 "https://www.infineon.com/dgdl/ir2101.pdf?fileId=5546d462533600a4015355c7a755166c" H 8200 4900 50  0001 C CNN
+	1    8200 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9150 2800 9150 3500
+Wire Wire Line
+	9650 2400 9650 5100
+Wire Wire Line
+	10000 3100 10000 3000
+Connection ~ 10000 3100
+Wire Wire Line
+	10000 2550 10000 2600
+Connection ~ 10000 2550
+Wire Wire Line
+	10750 2550 10750 2700
+Wire Wire Line
+	10000 2550 10750 2550
+Wire Wire Line
+	10000 3100 10750 3100
+Wire Wire Line
+	10750 3100 10750 3000
+$Comp
+L Diode:1N4004 D9
+U 1 1 613D6F9C
+P 10750 2850
+F 0 "D9" V 10796 2770 50  0000 R CNN
+F 1 "1N4004" V 10705 2770 50  0000 R CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 10750 2675 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 10750 2850 50  0001 C CNN
+	1    10750 2850
+	0    -1   -1   0   
+$EndComp
+NoConn ~ 11050 3000
+Wire Wire Line
+	10000 2250 10000 2200
+Connection ~ 10000 2250
+Wire Wire Line
+	10000 1700 10000 1500
+Connection ~ 10000 1700
+Wire Wire Line
+	10750 1700 10750 1850
+Wire Wire Line
+	10000 1700 10750 1700
+Wire Wire Line
+	10000 2250 10750 2250
+Wire Wire Line
+	10750 2250 10750 2150
+$Comp
+L Diode:1N4004 D8
+U 1 1 613BC53D
+P 10750 2000
+F 0 "D8" V 10796 1920 50  0000 R CNN
+F 1 "1N4004" V 10705 1920 50  0000 R CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 10750 1825 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 10750 2000 50  0001 C CNN
+	1    10750 2000
+	0    -1   -1   0   
+$EndComp
+NoConn ~ 11050 2150
+Wire Wire Line
+	7050 3250 10000 3250
+Wire Wire Line
+	10000 3250 10000 3100
+Wire Wire Line
+	10000 1500 8050 1500
+Wire Wire Line
+	10000 1800 10000 1700
+Wire Wire Line
+	9650 2400 10000 2400
+Connection ~ 10000 2400
+Wire Wire Line
+	10000 2400 10000 2550
+Wire Wire Line
+	10000 2400 10000 2250
+Wire Wire Line
+	8650 2000 9700 2000
+Wire Wire Line
+	9700 2800 9150 2800
+$Comp
+L Transistor_FET:IRF540N Q6
+U 1 1 61228FB3
+P 9900 2800
+F 0 "Q6" H 10104 2846 50  0000 L CNN
+F 1 "IRF540N" H 10104 2755 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 10150 2725 50  0001 L CIN
+F 3 "http://www.irf.com/product-info/datasheets/data/irf540n.pdf" H 9900 2800 50  0001 L CNN
+	1    9900 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:IRF540N Q5
+U 1 1 61228FA9
+P 9900 2000
+F 0 "Q5" H 10104 2046 50  0000 L CNN
+F 1 "IRF540N" H 10104 1955 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 10150 1925 50  0001 L CIN
+F 3 "http://www.irf.com/product-info/datasheets/data/irf540n.pdf" H 9900 2000 50  0001 L CNN
+	1    9900 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1150 5100 1150 5400
+Wire Wire Line
+	1150 4350 1150 4800
+Wire Wire Line
+	3200 2850 3200 3500
+Wire Wire Line
+	2700 2050 2700 3500
+Wire Wire Line
+	3700 2450 3700 5100
+Connection ~ 3400 5100
+Wire Wire Line
+	3400 5100 3700 5100
+Wire Wire Line
+	2550 5100 3400 5100
+Wire Wire Line
+	3200 3800 3200 5200
+Wire Wire Line
+	3200 5200 2550 5200
+Wire Wire Line
+	2700 4700 2550 4700
+Wire Wire Line
+	2700 3800 2700 4700
+$Comp
+L Diode:1N4004 D1
+U 1 1 61139182
+P 2950 4350
+F 0 "D1" H 2950 4133 50  0000 C CNN
+F 1 "1N4004" H 2950 4224 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 2950 4175 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 2950 4350 50  0001 C CNN
+	1    2950 4350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3100 4350 3400 4350
+Wire Wire Line
+	2800 4350 2250 4350
+$Comp
+L Device:R R1
+U 1 1 6115BE39
+P 2700 3650
+F 0 "R1" H 2770 3696 50  0000 L CNN
+F 1 "10k" H 2770 3605 50  0000 L CNN
+F 2 "" V 2630 3650 50  0001 C CNN
+F 3 "~" H 2700 3650 50  0001 C CNN
+	1    2700 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 6115B71A
+P 3200 3650
+F 0 "R2" H 3270 3696 50  0000 L CNN
+F 1 "10k" H 3270 3605 50  0000 L CNN
+F 2 "" V 3130 3650 50  0001 C CNN
+F 3 "~" H 3200 3650 50  0001 C CNN
+	1    3200 3650
+	1    0    0    -1  
+$EndComp
+Connection ~ 3400 4600
+Wire Wire Line
+	3400 4350 3400 4600
+Connection ~ 2250 4350
+Connection ~ 1750 4350
+Wire Wire Line
+	2250 4350 2250 4400
+Wire Wire Line
+	1750 4350 2250 4350
+NoConn ~ 1750 4350
+Wire Wire Line
+	1750 4100 1750 4350
+Wire Wire Line
+	1150 4350 1750 4350
+$Comp
+L power:+12V #PWR03
+U 1 1 61137D1B
+P 1750 4100
+F 0 "#PWR03" H 1750 3950 50  0001 C CNN
+F 1 "+12V" H 1765 4273 50  0000 C CNN
+F 2 "" H 1750 4100 50  0001 C CNN
+F 3 "" H 1750 4100 50  0001 C CNN
+	1    1750 4100
+	1    0    0    -1  
+$EndComp
+Text Label 1650 4900 0    50   ~ 0
+topA
+Text Label 1650 5000 0    50   ~ 0
+botA
+Wire Wire Line
+	1950 5000 1650 5000
+Wire Wire Line
+	1950 4900 1650 4900
+$Comp
+L Device:C C1
+U 1 1 6110E6BA
+P 1150 4950
+F 0 "C1" H 1265 4996 50  0000 L CNN
+F 1 "33 uF" H 1265 4905 50  0000 L CNN
+F 2 "" H 1188 4800 50  0001 C CNN
+F 3 "~" H 1150 4950 50  0001 C CNN
+	1    1150 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1150 5400 2250 5400
+Wire Wire Line
+	3400 5050 3400 5100
+Wire Wire Line
+	3400 4600 3400 4750
+Wire Wire Line
+	2550 4600 3400 4600
+Wire Wire Line
+	2250 5400 2250 5450
+Connection ~ 2250 5400
+$Comp
+L Device:C C2
+U 1 1 6110E04F
+P 3400 4900
+F 0 "C2" H 3515 4946 50  0000 L CNN
+F 1 "470 nF" H 3515 4855 50  0000 L CNN
+F 2 "" H 3438 4750 50  0001 C CNN
+F 3 "~" H 3400 4900 50  0001 C CNN
+	1    3400 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 6110AC22
+P 2250 5450
+F 0 "#PWR04" H 2250 5200 50  0001 C CNN
+F 1 "GND" H 2255 5277 50  0000 C CNN
+F 2 "" H 2250 5450 50  0001 C CNN
+F 3 "" H 2250 5450 50  0001 C CNN
+	1    2250 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Driver_FET:IR2101 U1
+U 1 1 61106BFB
+P 2250 4900
+F 0 "U1" H 2250 5581 50  0000 C CNN
+F 1 "IR2101" H 2250 5490 50  0000 C CNN
+F 2 "" H 2250 4900 50  0001 C CIN
+F 3 "https://www.infineon.com/dgdl/ir2101.pdf?fileId=5546d462533600a4015355c7a755166c" H 2250 4900 50  0001 C CNN
+	1    2250 4900
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 4350 6050 1350 800 
+U 61560B19
+F0 "Memory_decoder" 50
+F1 "memory_decoder.sch" 50
+F2 "BOTA" O R 5700 6250 50 
+F3 "TOPA" O R 5700 6150 50 
+F4 "BOTB" O R 5700 6500 50 
+F5 "TOPB" O R 5700 6400 50 
+F6 "BOTC" O R 5700 6750 50 
+F7 "TOPC" O R 5700 6650 50 
+F8 "PWM" I L 4350 6250 50 
+F9 "H1" I L 4350 6400 50 
+F10 "H2" I L 4350 6500 50 
+F11 "H3" I L 4350 6600 50 
+F12 "DIR" I L 4350 6150 50 
+$EndSheet
+Text Label 6050 6150 0    50   ~ 0
+topA
+Wire Wire Line
+	6050 6150 5700 6150
+Wire Wire Line
+	5700 6250 6050 6250
+Text Label 6050 6250 0    50   ~ 0
+botA
+Text Label 6050 6400 0    50   ~ 0
+topB
+Text Label 6050 6500 0    50   ~ 0
+botB
+Text Label 6050 6650 0    50   ~ 0
+topC
+Text Label 6050 6750 0    50   ~ 0
+botC
+Wire Wire Line
+	5700 6400 6050 6400
+Wire Wire Line
+	5700 6500 6050 6500
+Wire Wire Line
+	5700 6650 6050 6650
+Wire Wire Line
+	6050 6750 5700 6750
+$Sheet
+S 2500 6050 1250 700 
+U 616810D7
+F0 "Controller" 50
+F1 "Controller.sch" 50
+F2 "A+" I L 2500 6200 50 
+F3 "A-" I L 2500 6300 50 
+F4 "B+" I L 2500 6450 50 
+F5 "B-" I L 2500 6550 50 
+F6 "Direction" O R 3750 6150 50 
+F7 "SetPoint" I L 2500 6700 50 
+F8 "PWM" O R 3750 6250 50 
+$EndSheet
+Wire Wire Line
+	3750 6150 4350 6150
+Wire Wire Line
+	4350 6250 3750 6250
+$Comp
+L Connector:Conn_01x08_Male J?
+U 1 1 6179E53F
+P 1200 6300
+F 0 "J?" H 1308 6781 50  0000 C CNN
+F 1 "Conn_01x08_Male" H 1308 6690 50  0000 C CNN
+F 2 "" H 1200 6300 50  0001 C CNN
+F 3 "~" H 1200 6300 50  0001 C CNN
+	1    1200 6300
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

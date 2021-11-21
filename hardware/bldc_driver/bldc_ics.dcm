@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP AM26LS32ACN
+D 32Mbps 3.3V RS485 Quad Line Receivers, SOIC-16
+K receiver rs485 rs422 differential
+F http://www.ti.com/lit/ds/symlink/am26lv32.pdf
+$ENDCMP
+#
+#End Doc Library

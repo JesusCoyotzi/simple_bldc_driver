@@ -1,0 +1,356 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 3
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L bldc_ics:AM26LS32ACN U7
+U 1 1 6168C45B
+P 2500 3800
+F 0 "U7" H 2500 4981 50  0000 C CNN
+F 1 "AM26LS32ACN" H 2500 4890 50  0000 C CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 3500 2850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/am26lv32.pdf" H 2500 3400 50  0001 C CNN
+	1    2500 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR013
+U 1 1 6168EF74
+P 2500 2350
+F 0 "#PWR013" H 2500 2200 50  0001 C CNN
+F 1 "+5V" H 2515 2523 50  0000 C CNN
+F 2 "" H 2500 2350 50  0001 C CNN
+F 3 "" H 2500 2350 50  0001 C CNN
+	1    2500 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 2350 2500 2800
+Text HLabel 1700 3000 0    50   Input ~ 0
+A+
+Text HLabel 1700 3200 0    50   Input ~ 0
+A-
+Text HLabel 1700 3300 0    50   Input ~ 0
+B+
+Text HLabel 1700 3500 0    50   Input ~ 0
+B-
+Wire Wire Line
+	2000 3000 1700 3000
+Wire Wire Line
+	1700 3200 2000 3200
+Wire Wire Line
+	2000 3300 1700 3300
+Wire Wire Line
+	2000 3500 1700 3500
+$Comp
+L power:GND #PWR?
+U 1 1 616B8D06
+P 2500 4950
+F 0 "#PWR?" H 2500 4700 50  0001 C CNN
+F 1 "GND" H 2505 4777 50  0000 C CNN
+F 2 "" H 2500 4950 50  0001 C CNN
+F 3 "" H 2500 4950 50  0001 C CNN
+	1    2500 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 4800 2500 4950
+$Comp
+L 74xx:74LS74 U?
+U 1 1 616BAFFE
+P 4100 3200
+F 0 "U?" H 4100 3681 50  0000 C CNN
+F 1 "74LS74" H 4100 3590 50  0000 C CNN
+F 2 "" H 4100 3200 50  0001 C CNN
+F 3 "74xx/74hc_hct74.pdf" H 4100 3200 50  0001 C CNN
+	1    4100 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS74 U?
+U 2 1 616BD533
+P 4100 4150
+F 0 "U?" H 4250 4650 50  0000 C CNN
+F 1 "74LS74" H 4250 4550 50  0000 C CNN
+F 2 "" H 4100 4150 50  0001 C CNN
+F 3 "74xx/74hc_hct74.pdf" H 4100 4150 50  0001 C CNN
+	2    4100 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 3100 3100 3100
+Wire Wire Line
+	3000 3400 3450 3400
+Wire Wire Line
+	3450 3400 3450 4050
+Wire Wire Line
+	3450 4050 3650 4050
+Wire Wire Line
+	3800 4150 3100 4150
+Wire Wire Line
+	3100 4150 3100 3100
+Connection ~ 3100 3100
+Wire Wire Line
+	3100 3100 3650 3100
+Wire Wire Line
+	3800 3200 3450 3200
+Wire Wire Line
+	3450 3200 3450 3400
+Connection ~ 3450 3400
+Wire Wire Line
+	4100 3500 3650 3500
+Wire Wire Line
+	3650 3500 3650 3100
+Connection ~ 3650 3100
+Wire Wire Line
+	3650 3100 3800 3100
+Wire Wire Line
+	4100 4450 3650 4450
+Wire Wire Line
+	3650 4450 3650 4050
+Connection ~ 3650 4050
+Wire Wire Line
+	3650 4050 3800 4050
+$Comp
+L power:+5V #PWR?
+U 1 1 616C0B76
+P 3550 2600
+F 0 "#PWR?" H 3550 2450 50  0001 C CNN
+F 1 "+5V" H 3565 2773 50  0000 C CNN
+F 2 "" H 3550 2600 50  0001 C CNN
+F 3 "" H 3550 2600 50  0001 C CNN
+	1    3550 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 2600 3550 2900
+Wire Wire Line
+	3550 2900 4100 2900
+Connection ~ 3550 2900
+Wire Wire Line
+	4100 3850 4100 3750
+Wire Wire Line
+	4100 3750 3550 3750
+Wire Wire Line
+	3550 3750 3550 2900
+$Comp
+L power:+3.3V #PWR?
+U 1 1 616CB3A8
+P 8950 2400
+F 0 "#PWR?" H 8950 2250 50  0001 C CNN
+F 1 "+3.3V" H 8965 2573 50  0000 C CNN
+F 2 "" H 8950 2400 50  0001 C CNN
+F 3 "" H 8950 2400 50  0001 C CNN
+	1    8950 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 616CC2D6
+P 8950 4650
+F 0 "#PWR?" H 8950 4400 50  0001 C CNN
+F 1 "GND" H 8955 4477 50  0000 C CNN
+F 2 "" H 8950 4650 50  0001 C CNN
+F 3 "" H 8950 4650 50  0001 C CNN
+	1    8950 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:BC548 Q?
+U 1 1 616D6256
+P 5600 3100
+F 0 "Q?" H 5791 3146 50  0000 L CNN
+F 1 "BC548" H 5791 3055 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 5800 3025 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 5600 3100 50  0001 L CNN
+	1    5600 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 616D767F
+P 5050 3100
+F 0 "R?" V 4843 3100 50  0000 C CNN
+F 1 "1k" V 4934 3100 50  0000 C CNN
+F 2 "" V 4980 3100 50  0001 C CNN
+F 3 "~" H 5050 3100 50  0001 C CNN
+	1    5050 3100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 616D884F
+P 5700 2650
+F 0 "R?" H 5770 2696 50  0000 L CNN
+F 1 "1k" H 5770 2605 50  0000 L CNN
+F 2 "" V 5630 2650 50  0001 C CNN
+F 3 "~" H 5700 2650 50  0001 C CNN
+	1    5700 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 2800 5700 2850
+Wire Wire Line
+	5400 3100 5200 3100
+$Comp
+L power:GND #PWR?
+U 1 1 616E2A1B
+P 5700 3450
+F 0 "#PWR?" H 5700 3200 50  0001 C CNN
+F 1 "GND" H 5705 3277 50  0000 C CNN
+F 2 "" H 5700 3450 50  0001 C CNN
+F 3 "" H 5700 3450 50  0001 C CNN
+	1    5700 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 3300 5700 3450
+$Comp
+L power:+3.3V #PWR?
+U 1 1 616E8F7A
+P 5700 2300
+F 0 "#PWR?" H 5700 2150 50  0001 C CNN
+F 1 "+3.3V" H 5715 2473 50  0000 C CNN
+F 2 "" H 5700 2300 50  0001 C CNN
+F 3 "" H 5700 2300 50  0001 C CNN
+	1    5700 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 2300 5700 2500
+Wire Wire Line
+	4400 3100 4900 3100
+$Comp
+L Transistor_BJT:BC548 Q?
+U 1 1 616F1FD6
+P 5600 4800
+F 0 "Q?" H 5791 4846 50  0000 L CNN
+F 1 "BC548" H 5791 4755 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 5800 4725 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 5600 4800 50  0001 L CNN
+	1    5600 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 616F21A0
+P 5050 4800
+F 0 "R?" V 4843 4800 50  0000 C CNN
+F 1 "1k" V 4934 4800 50  0000 C CNN
+F 2 "" V 4980 4800 50  0001 C CNN
+F 3 "~" H 5050 4800 50  0001 C CNN
+	1    5050 4800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 616F21AA
+P 5700 4350
+F 0 "R?" H 5770 4396 50  0000 L CNN
+F 1 "1k" H 5770 4305 50  0000 L CNN
+F 2 "" V 5630 4350 50  0001 C CNN
+F 3 "~" H 5700 4350 50  0001 C CNN
+	1    5700 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 4500 5700 4550
+Wire Wire Line
+	5400 4800 5200 4800
+$Comp
+L power:GND #PWR?
+U 1 1 616F21B6
+P 5700 5150
+F 0 "#PWR?" H 5700 4900 50  0001 C CNN
+F 1 "GND" H 5705 4977 50  0000 C CNN
+F 2 "" H 5700 5150 50  0001 C CNN
+F 3 "" H 5700 5150 50  0001 C CNN
+	1    5700 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 5000 5700 5150
+$Comp
+L power:+3.3V #PWR?
+U 1 1 616F21C1
+P 5700 4000
+F 0 "#PWR?" H 5700 3850 50  0001 C CNN
+F 1 "+3.3V" H 5715 4173 50  0000 C CNN
+F 2 "" H 5700 4000 50  0001 C CNN
+F 3 "" H 5700 4000 50  0001 C CNN
+	1    5700 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 4000 5700 4200
+Wire Wire Line
+	4700 4800 4900 4800
+Wire Wire Line
+	4400 4050 4700 4050
+Wire Wire Line
+	4700 4050 4700 4800
+Wire Wire Line
+	5700 2850 6600 2850
+Wire Wire Line
+	6600 2850 6600 3750
+Connection ~ 5700 2850
+Wire Wire Line
+	5700 2850 5700 2900
+Wire Wire Line
+	5700 4550 6700 4550
+Wire Wire Line
+	6700 4550 6700 3650
+Connection ~ 5700 4550
+Wire Wire Line
+	5700 4550 5700 4600
+Wire Wire Line
+	6700 3650 7250 3650
+Wire Wire Line
+	6600 3750 7250 3750
+$Comp
+L MCU_Texas_MSP430:MSP430G2553IN20 U?
+U 1 1 616C495E
+P 8950 3650
+F 0 "U?" H 8950 2719 50  0000 C CNN
+F 1 "MSP430G2553IN20" H 8950 2810 50  0000 C CNN
+F 2 "Package_DIP:DIP-20_W7.62mm" H 7500 3100 50  0001 C CIN
+F 3 "http://www.ti.com/lit/ds/symlink/msp430g2553.pdf" H 8900 3650 50  0001 C CNN
+	1    8950 3650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8950 2400 8950 2900
+Wire Wire Line
+	8950 4450 8950 4650
+Text HLabel 7750 5250 0    50   Output ~ 0
+Direction
+Text HLabel 6950 2550 0    50   Input ~ 0
+SetPoint
+Wire Wire Line
+	6950 2550 7100 2550
+Wire Wire Line
+	7100 2550 7100 3550
+Wire Wire Line
+	7100 3550 7250 3550
+Text HLabel 10950 3850 0    50   Output ~ 0
+PWM
+Wire Wire Line
+	10650 3850 10950 3850
+Wire Wire Line
+	7250 4050 7100 4050
+Wire Wire Line
+	7100 4050 7100 5250
+Wire Wire Line
+	7100 5250 7750 5250
+$EndSCHEMATC

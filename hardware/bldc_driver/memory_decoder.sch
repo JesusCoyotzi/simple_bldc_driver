@@ -1,0 +1,294 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 3
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 7650 3700 0    50   Output ~ 0
+BOTA
+Text HLabel 7650 5400 0    50   Output ~ 0
+TOPA
+Text HLabel 7650 3150 0    50   Output ~ 0
+BOTB
+Text HLabel 7650 4800 0    50   Output ~ 0
+TOPB
+Text HLabel 7650 2600 0    50   Output ~ 0
+BOTC
+Text HLabel 7650 4250 0    50   Output ~ 0
+TOPC
+$Comp
+L 74xx:74LS08 U5
+U 1 1 6156D8CD
+P 6600 2600
+F 0 "U5" H 6600 2925 50  0000 C CNN
+F 1 "74LS08" H 6600 2834 50  0000 C CNN
+F 2 "" H 6600 2600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 6600 2600 50  0001 C CNN
+	1    6600 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS08 U5
+U 2 1 61570143
+P 6600 3150
+F 0 "U5" H 6600 3475 50  0000 C CNN
+F 1 "74LS08" H 6600 3384 50  0000 C CNN
+F 2 "" H 6600 3150 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 6600 3150 50  0001 C CNN
+	2    6600 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS08 U5
+U 3 1 61572B8E
+P 6600 3700
+F 0 "U5" H 6600 4025 50  0000 C CNN
+F 1 "74LS08" H 6600 3934 50  0000 C CNN
+F 2 "" H 6600 3700 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 6600 3700 50  0001 C CNN
+	3    6600 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS08 U5
+U 4 1 6157630A
+P 6600 4250
+F 0 "U5" H 6600 4575 50  0000 C CNN
+F 1 "74LS08" H 6600 4484 50  0000 C CNN
+F 2 "" H 6600 4250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 6600 4250 50  0001 C CNN
+	4    6600 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS08 U6
+U 1 1 61590CCF
+P 6600 4800
+F 0 "U6" H 6600 5125 50  0000 C CNN
+F 1 "74LS08" H 6600 5034 50  0000 C CNN
+F 2 "" H 6600 4800 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 6600 4800 50  0001 C CNN
+	1    6600 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS08 U6
+U 2 1 6159B6B3
+P 6600 5400
+F 0 "U6" H 6600 5725 50  0000 C CNN
+F 1 "74LS08" H 6600 5634 50  0000 C CNN
+F 2 "" H 6600 5400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 6600 5400 50  0001 C CNN
+	2    6600 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 2600 7650 2600
+Wire Wire Line
+	6900 3150 7650 3150
+Wire Wire Line
+	6900 3700 7650 3700
+Wire Wire Line
+	6900 4250 7650 4250
+Wire Wire Line
+	6900 4800 7650 4800
+Wire Wire Line
+	6900 5400 7650 5400
+$Comp
+L bldc_ics:AT28C256-1 U4
+U 1 1 615C3C91
+P 4800 4600
+F 0 "U4" H 4800 7025 50  0000 C CNN
+F 1 "AT28C256-1" H 4800 6934 50  0000 C CNN
+F 2 "" H 4800 4600 50  0001 C CNN
+F 3 "" H 4800 4600 50  0001 C CNN
+	1    4800 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 2500 5300 2500
+Wire Wire Line
+	5300 2600 6050 2600
+Wire Wire Line
+	6050 2600 6050 3050
+Wire Wire Line
+	6050 3050 6300 3050
+Wire Wire Line
+	5300 2700 5950 2700
+Wire Wire Line
+	5950 2700 5950 3600
+Wire Wire Line
+	5950 3600 6300 3600
+Wire Wire Line
+	5300 2800 5850 2800
+Wire Wire Line
+	5850 2800 5850 4150
+Wire Wire Line
+	5850 4150 6300 4150
+Wire Wire Line
+	5300 2900 5750 2900
+Wire Wire Line
+	5750 2900 5750 4700
+Wire Wire Line
+	5750 4700 6300 4700
+Wire Wire Line
+	5300 3000 5650 3000
+Wire Wire Line
+	5650 3000 5650 5300
+Wire Wire Line
+	5650 5300 6300 5300
+Wire Wire Line
+	6150 3800 6300 3800
+Wire Wire Line
+	6300 3250 6150 3250
+Connection ~ 6150 3250
+Wire Wire Line
+	6150 3250 6150 3800
+Wire Wire Line
+	6300 2700 6150 2700
+Connection ~ 6150 2700
+Wire Wire Line
+	6150 2700 6150 3250
+Text HLabel 6050 2050 0    50   Input ~ 0
+PWM
+Wire Wire Line
+	6150 2050 6150 2700
+Wire Wire Line
+	6150 2050 6050 2050
+$Comp
+L power:+5V #PWR012
+U 1 1 615EDE39
+P 6050 4000
+F 0 "#PWR012" H 6050 3850 50  0001 C CNN
+F 1 "+5V" H 6065 4173 50  0000 C CNN
+F 2 "" H 6050 4000 50  0001 C CNN
+F 3 "" H 6050 4000 50  0001 C CNN
+	1    6050 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 4000 6050 4350
+Wire Wire Line
+	6050 4350 6300 4350
+Wire Wire Line
+	6050 4350 6050 4900
+Wire Wire Line
+	6050 4900 6300 4900
+Connection ~ 6050 4350
+Wire Wire Line
+	6050 4900 6050 5500
+Wire Wire Line
+	6050 5500 6300 5500
+Connection ~ 6050 4900
+Wire Wire Line
+	4050 2150 4050 2400
+Wire Wire Line
+	4050 2400 4300 2400
+Wire Wire Line
+	4300 2500 4050 2500
+Wire Wire Line
+	4050 2500 4050 2400
+Connection ~ 4050 2400
+Text HLabel 3650 3050 0    50   Input ~ 0
+H1
+Text HLabel 3650 2950 0    50   Input ~ 0
+H2
+Text HLabel 3650 2850 0    50   Input ~ 0
+H3
+Wire Wire Line
+	3650 2850 4300 2850
+Wire Wire Line
+	4300 2950 3650 2950
+Wire Wire Line
+	4300 3050 3650 3050
+Text HLabel 3600 3250 0    50   Input ~ 0
+DIR
+Wire Wire Line
+	4300 3250 3600 3250
+Wire Wire Line
+	4100 2700 4300 2700
+Wire Wire Line
+	4100 4250 4300 4250
+Wire Wire Line
+	4300 4150 4100 4150
+Connection ~ 4100 4150
+Wire Wire Line
+	4100 4150 4100 4250
+Wire Wire Line
+	4300 3150 4100 3150
+Connection ~ 4100 3150
+Wire Wire Line
+	4100 3150 4100 3350
+Wire Wire Line
+	4300 2600 4100 2600
+Wire Wire Line
+	4100 2600 4100 2700
+Connection ~ 4100 2700
+Wire Wire Line
+	4100 2700 4100 3150
+Wire Wire Line
+	4300 3350 4100 3350
+Connection ~ 4100 3350
+Wire Wire Line
+	4100 3350 4100 3450
+Wire Wire Line
+	4300 3450 4100 3450
+Connection ~ 4100 3450
+Wire Wire Line
+	4100 3450 4100 3550
+Wire Wire Line
+	4300 3550 4100 3550
+Connection ~ 4100 3550
+Wire Wire Line
+	4100 3550 4100 3650
+Wire Wire Line
+	4300 3650 4100 3650
+Connection ~ 4100 3650
+Wire Wire Line
+	4100 3650 4100 3750
+Wire Wire Line
+	4300 3750 4100 3750
+Connection ~ 4100 3750
+Wire Wire Line
+	4100 3750 4100 3850
+Wire Wire Line
+	4300 3850 4100 3850
+Connection ~ 4100 3850
+Wire Wire Line
+	4100 3850 4100 3950
+Wire Wire Line
+	4300 3950 4100 3950
+Connection ~ 4100 3950
+Wire Wire Line
+	4100 3950 4100 4050
+Wire Wire Line
+	4300 4050 4100 4050
+Connection ~ 4100 4050
+Wire Wire Line
+	4100 4050 4100 4150
+Wire Wire Line
+	4300 4400 4100 4400
+Wire Wire Line
+	4100 4400 4100 4250
+Connection ~ 4100 4250
+$Comp
+L power:+5V #PWR011
+U 1 1 61625836
+P 4050 2150
+F 0 "#PWR011" H 4050 2000 50  0001 C CNN
+F 1 "+5V" H 4065 2323 50  0000 C CNN
+F 2 "" H 4050 2150 50  0001 C CNN
+F 3 "" H 4050 2150 50  0001 C CNN
+	1    4050 2150
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

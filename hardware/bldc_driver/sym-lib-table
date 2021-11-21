@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name bldc_driver-cache)(type Legacy)(uri ${KIPRJMOD}/bldc_driver-cache.lib)(options "")(descr ""))
+  (lib (name bldc_ics)(type Legacy)(uri ${KIPRJMOD}/bldc_ics.lib)(options "")(descr ""))
+)
